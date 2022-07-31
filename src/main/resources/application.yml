@@ -1,0 +1,12 @@
+server:
+  port: 19090
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:14306/gogo_shop
+    username: root
+    password: password
+  jackson:
+    default-property-inclusion: non_null
+    property-naming-strategy: SNAKE_CASE
