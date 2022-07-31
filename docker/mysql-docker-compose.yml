@@ -3,7 +3,7 @@ version: "2.2"
 services:
   mysql8:
     image: mysql:latest
-    container_name: mysql8
+    container_name: mysql8-gogo-shop
     ports:
       - "14306:3306"
     environment:
