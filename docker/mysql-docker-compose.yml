@@ -3,7 +3,7 @@ version: "2.2"
 services:
   mysql8:
     image: mysql:latest
-    container_name: mysql8-gogo-shop
+    container_name: mysql8
     ports:
       - "14306:3306"
     environment:
@@ -13,7 +13,7 @@ services:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
     volumes:
-      - mysql8:/var/lib/mysql
+      - mysql8-gogo-shop:/var/lib/mysql
 
 volumes:
   mysql8-gogo-shop:
