@@ -48,7 +48,6 @@
               "seller": "판매자 이름",
               "discount_rate": 40
             },
-            ...,
             {
               "product_id": 12341,
               "name": "상품명",
@@ -73,7 +72,6 @@
               "seller": "판매자 이름",
               "discount_rate": 40
             },
-            ...,
             {
               "product_id": 12341,
               "name": "상품명",
@@ -129,3 +127,4 @@
     - `POST /orders/{productId}`
 2. 주문내역
     - `GET /orders`
+3. 물건 등록
