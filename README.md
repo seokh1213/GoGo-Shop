@@ -20,10 +20,12 @@
 #### View(페이지)
 
 1. 메인페이지
-    - `GET /view/main`
+   ```http request
+   GET /view/main 
+   ```
    ```json lines
    {
-   "result": {
+    "result": {
       "banners": [
         {
           "image_url": "banner image url",
@@ -88,7 +90,9 @@
    }
    ```
 2. 물건 상세 페이지
-    - `GET /view/products/{productId}`
+   ```http request
+   GET /view/products/{productId}
+   ```
    ```json lines
    {
     "result": {
