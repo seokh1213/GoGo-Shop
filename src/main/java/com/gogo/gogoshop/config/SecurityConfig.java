@@ -15,13 +15,15 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 @Configuration
 public class SecurityConfig {
     @Value("${cors-allowed-origins}")
-    private List<String> corsAllowedOrigins;
+    private Set<String> corsAllowedOrigins;
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
@@ -31,7 +33,7 @@ public class SecurityConfig {
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(Collections.singletonList("*"));
         config.setMaxAge(3600L);
-        config.setAllowedOrigins(corsAllowedOrigins);
+        config.setAllowedOrigins(new ArrayList<>(corsAllowedOrigins));
 
         corsConfigurationSource.registerCorsConfiguration("/**", config);
         return corsConfigurationSource;
@@ -57,7 +59,7 @@ public class SecurityConfig {
                 .baseUri("/auth/authorization")
                 .and()
                 .redirectionEndpoint()
-                .baseUri("/auth/callback")
+                .baseUri("/auth/callback/{registrationId}")
                 .and()
                 .userInfoEndpoint()
                 .and()
