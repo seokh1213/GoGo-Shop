@@ -43,7 +43,7 @@ public class TokenService {
 
         if (System.currentTimeMillis() > expireDt) {
             log.warn("[parseToken] access token is expired {}", rawToken);
-            throw CommonException.ACCESS_TOKEN_EXPIRED;
+            throw CommonException.TOKEN_EXPIRED;
         }
 
         return data[1];

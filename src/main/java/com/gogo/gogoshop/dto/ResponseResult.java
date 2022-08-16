@@ -15,8 +15,8 @@ public class ResponseResult {
         this.errorDescription = errorDescription;
     }
 
-    public static ResponseResult of(Object result) {
-        return new ResponseResult(result, 0, null);
+    public static ResponseResult of(Object result, int status) {
+        return new ResponseResult(result, status, null);
     }
 
     public static ResponseResult of(BaseException baseException) {

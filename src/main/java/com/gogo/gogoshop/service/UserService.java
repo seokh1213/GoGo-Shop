@@ -6,10 +6,16 @@ import com.gogo.gogoshop.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
+
+    public Optional<User> getUserByUid(String uid) {
+        return userRepository.findByUid(uid);
+    }
 
     public User syncUser(String uid, String email) {
         User user = userRepository.findByUid(uid)

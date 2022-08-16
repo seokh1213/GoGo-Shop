@@ -13,12 +13,17 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
+import java.util.Optional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
 public class AuthService {
     private final AuthRepository authRepository;
+
+    public Optional<Auth> getAuthByUid(String uid) {
+        return authRepository.findByUid(uid);
+    }
 
     public Auth saveAuth(Authentication authentication) {
         OAuth2AuthenticationToken authToken = (OAuth2AuthenticationToken) authentication;
@@ -44,7 +49,6 @@ public class AuthService {
             throw CommonException.UNAUTHORIZED;
         }
     }
-
 
     @Getter
     @RequiredArgsConstructor
