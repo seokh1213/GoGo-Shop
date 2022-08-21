@@ -30,6 +30,7 @@ public class Auth {
     private String provider;
     @Column(nullable = false)
     private Instant createDt;
+    @Column(nullable = false)
     private Instant updateDt;
 
     @PrePersist

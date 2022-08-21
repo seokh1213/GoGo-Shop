@@ -30,6 +30,7 @@ public class ImageFile {
     private String extension;
     @Column(nullable = false)
     private Instant createDt;
+    @Column(nullable = false)
     private Instant updateDt;
 
 

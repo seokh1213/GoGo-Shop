@@ -1,6 +1,6 @@
 package com.gogo.gogoshop.controller;
 
-import com.gogo.gogoshop.dto.ResponseResult;
+import com.gogo.gogoshop.dto.BaseResponse;
 import com.gogo.gogoshop.service.auth.ManageAuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,8 +16,8 @@ public class AuthController {
     private final ManageAuthService manageAuthService;
 
     @PostMapping("/logout")
-    public ResponseResult logout(HttpServletResponse response) {
+    public BaseResponse logout(HttpServletResponse response) {
         manageAuthService.clearAuth(response);
-        return ResponseResult.of(null, 0);
+        return BaseResponse.of(null, 0);
     }
 }

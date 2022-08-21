@@ -34,6 +34,7 @@ public class Product {
     private short discountRate;
     @Column(nullable = false)
     private Instant createDt;
+    @Column(nullable = false)
     private Instant updateDt;
 
 
