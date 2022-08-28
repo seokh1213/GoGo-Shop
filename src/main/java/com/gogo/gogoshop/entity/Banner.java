@@ -25,6 +25,8 @@ public class Banner {
     @Column(nullable = false)
     private String bannerImageUrl;
     @Column(nullable = false)
+    private String eventId;
+    @Column(nullable = false)
     private String seller;
     @Column(nullable = false)
     private boolean activated;

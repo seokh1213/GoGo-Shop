@@ -30,6 +30,8 @@ public class View {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private ViewType viewType;
+    @Column(nullable = false)
+    private boolean hidden;
     @OneToMany
     private List<Layout> layoutList;
     @OneToMany

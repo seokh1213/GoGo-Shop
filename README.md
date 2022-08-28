@@ -26,7 +26,7 @@
    ```json lines
    {
     "result": {
-      "banners": [
+      "banner_list": [
         {
           "image_url": "banner image url",
           "event_id": "배너의 event id"
@@ -36,11 +36,11 @@
           "event_id": "배너의 event id"
         }
       ],
-      "layouts": [
+      "layout_list": [
         {
           "type": "LIST",
           "title": "오늘은 이 상품 어때요?",
-          "products": [
+          "product_list": [
             {
               "product_id": 12341,
               "name": "상품명",
@@ -64,7 +64,7 @@
         {
           "type": "LIST",
           "title": "👖 바지만 모았어요~",
-          "products": [
+          "product_list": [
             {
               "product_id": 12341,
               "name": "상품명",
@@ -106,16 +106,16 @@
          "discount_rate": 40,
          "image_url_list": ["image url", "image url", "image url", "image url"] 
        },
-       "options": [
+       "option_list": [
          {
            "order": 1,
            "default_title": "[컬러]를 선택하세요.",
-           "option_list": ["Black", "White"]
+           "detail_option_list": ["Black", "White"]
          },
          {
            "order": 2,
            "default_title": "[사이즈]를 선택하세요",
-           "option_list": ["Free"]
+           "detail_option_list": ["Free"]
          }
        ],
        "details": {
