@@ -1,33 +1,40 @@
 package com.gogo.gogoshop.entity;
 
+import com.gogo.gogoshop.enums.ViewType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import java.time.Instant;
+import java.util.List;
 import java.util.Objects;
 
 @Getter
 @Setter
 @Entity
 @NoArgsConstructor
-public class Banner {
+public class View {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(nullable = false)
-    private String bannerImageUrl;
-    @Column(nullable = false)
-    private String seller;
-    @Column(nullable = false)
-    private boolean activated;
+    @Enumerated(EnumType.STRING)
+    private ViewType viewType;
+    @OneToMany
+    private List<Layout> layoutList;
+    @OneToMany
+    private List<Banner> bannerList;
+
     @Column(nullable = false)
     private Instant createDt;
     @Column(nullable = false)

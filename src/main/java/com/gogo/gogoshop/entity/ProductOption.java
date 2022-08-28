@@ -3,12 +3,14 @@ package com.gogo.gogoshop.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Comment;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import java.time.Instant;
@@ -18,21 +20,23 @@ import java.util.Objects;
 @Setter
 @Entity
 @NoArgsConstructor
-public class Banner {
+public class ProductOption {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @OneToOne
+    private Product product;
     @Column(nullable = false)
-    private String bannerImageUrl;
+    private int order;
     @Column(nullable = false)
-    private String seller;
+    private String optionTitle;
     @Column(nullable = false)
-    private boolean activated;
+    @Comment("','로 나눠져 있는 option. ex: Black,White,Red")
+    private String options;
     @Column(nullable = false)
     private Instant createDt;
     @Column(nullable = false)
     private Instant updateDt;
-
 
     @PrePersist
     void preInsert() {

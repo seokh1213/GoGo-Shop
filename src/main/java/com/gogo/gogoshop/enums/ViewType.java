@@ -3,8 +3,8 @@ package com.gogo.gogoshop.enums;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public enum LayoutType {
-    LIST("LIST");
+public enum ViewType {
+    MAIN("MAIN");
 
     private final String type;
 }

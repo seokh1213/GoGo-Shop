@@ -5,7 +5,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum UserType {
     ADMIN("admin"),
-    USER("role"),
+    USER("user"),
+    SELLER("seller"),
     BLOCK("block"),
     DORMANT("DORMANT"),
     DEACTIVATED("DEACTIVATED");

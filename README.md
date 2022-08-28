@@ -106,16 +106,18 @@
          "discount_rate": 40,
          "image_url_list": ["image url", "image url", "image url", "image url"] 
        },
-       "options": {
-         "design_option": {
+       "options": [
+         {
+           "order": 1,
            "default_title": "[컬러]를 선택하세요.",
            "option_list": ["Black", "White"]
          },
-         "size_option_list": {
+         {
+           "order": 2,
            "default_title": "[사이즈]를 선택하세요",
            "option_list": ["Free"]
          }
-       },
+       ],
        "details": {
           "detail_image_url": "image_url" 
         }

@@ -13,8 +13,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import java.time.Instant;
 import java.util.List;
+import java.util.Objects;
 
 @Getter
 @Setter
@@ -36,4 +39,20 @@ public class Layout {
     private Instant createDt;
     @Column(nullable = false)
     private Instant updateDt;
+
+    @PrePersist
+    void preInsert() {
+        Instant now = Instant.now();
+        if (Objects.isNull(this.createDt)) {
+            this.createDt = now;
+        }
+        if (Objects.isNull(this.updateDt)) {
+            this.updateDt = now;
+        }
+    }
+
+    @PreUpdate
+    void preUpdate() {
+        this.updateDt = Instant.now();
+    }
 }
