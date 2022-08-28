@@ -1,10 +1,12 @@
 package com.gogo.gogoshop.entity;
 
+import com.gogo.gogoshop.entity.converter.StringListConverter;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Comment;
 
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +15,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import java.time.Instant;
+import java.util.List;
 import java.util.Objects;
 
 @Getter
@@ -29,8 +32,9 @@ public class Product {
     @Column(nullable = false)
     private String thumbnailUrl;
     @Column(nullable = false)
+    @Convert(converter = StringListConverter.class)
     @Comment("','로 나눠져 있는 image url. ex: img1,img2,img3")
-    private String imageUrls;
+    private List<String> imageUrlList;
     @Column(nullable = false)
     private String detailImageUrl;
     @Column(nullable = false)
