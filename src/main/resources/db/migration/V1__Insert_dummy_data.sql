@@ -1426,7 +1426,7 @@ VALUES ('https://image.brandi.me/home/banner/bannerImage_5_1662081743.jpg', '2',
         CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO banner(banner_image_url, event_id, seller_id, activated, create_dt, update_dt)
-VALUES ('https://image.brandi.me/home/banner/bannerImage_840621_1662084449.jpg', '2', 1, true,
+VALUES ('https://image.brandi.me/home/banner/bannerImage_840621_1662084449.jpg', '3', 1, true,
         CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- view

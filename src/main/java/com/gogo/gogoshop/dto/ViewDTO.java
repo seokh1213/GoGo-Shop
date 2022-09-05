@@ -2,26 +2,31 @@ package com.gogo.gogoshop.dto;
 
 import com.gogo.gogoshop.enums.LayoutType;
 import lombok.Builder;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 @Builder
 public class ViewDTO {
     private final List<BannerDTO> bannerList;
     private final List<LayoutDTO> layoutList;
 
+    @Getter
     @Builder
     public static class BannerDTO {
         private final String imageUrl;
         private final String eventId;
     }
 
+    @Getter
     @Builder
     public static class LayoutDTO {
         private final LayoutType type;
         private final String title;
         private final List<ProductDTO> productList;
 
+        @Getter
         @Builder
         public static class ProductDTO {
             private final long productId;
