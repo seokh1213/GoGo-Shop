@@ -40,7 +40,7 @@ public class ViewService {
                                         .name(product.getName())
                                         .price(product.getPrice())
                                         .discountPrice((long) (product.getPrice() * (1 - product.getDiscountRate() / 10000f)))
-                                        .discountRate(product.getDiscountRate())
+                                        .discountRate((short) (product.getDiscountRate() / 100))
                                         .imageUrl(product.getImageUrlList().get(0).getUrl())
                                         .seller(product.getSeller().getNickname())
                                         .build())

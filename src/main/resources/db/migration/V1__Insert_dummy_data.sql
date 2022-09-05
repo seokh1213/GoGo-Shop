@@ -3,7 +3,7 @@ INSERT INTO auth(uid, email, provider, create_dt, update_dt)
 VALUES ('unique_admin_key', 'admin@naver.com', 'NAVER', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO user(uid, email, nickname, type, create_dt, update_dt)
-VALUES ('unique_admin_key', 'admin@naver.com', 'admin', 'ADMIN', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+VALUES ('unique_admin_key', 'admin@naver.com', '뚱땅마을주민', 'ADMIN', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- dummy data
 -- product
