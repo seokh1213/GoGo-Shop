@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import java.time.Instant;
@@ -26,8 +27,8 @@ public class Banner {
     private String bannerImageUrl;
     @Column(nullable = false)
     private String eventId;
-    @Column(nullable = false)
-    private String seller;
+    @ManyToOne(optional = false)
+    private User seller;
     @Column(nullable = false)
     private boolean activated;
     @Column(nullable = false)

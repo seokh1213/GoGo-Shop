@@ -1,5 +1,6 @@
 package com.gogo.gogoshop.entity;
 
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,30 +9,24 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import java.time.Instant;
-import java.util.List;
 import java.util.Objects;
 
 @Getter
 @Setter
 @Entity
-public class OrderHistory {
+public class ImageUrl {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @ManyToOne(optional = false)
-    private User user;
-    @OneToMany
-    private List<Product> productList;
+    @Column(nullable = false, length = 1000)
+    private String url;
     @Column(nullable = false)
     private Instant createDt;
     @Column(nullable = false)
     private Instant updateDt;
-
 
     @PrePersist
     void preInsert() {

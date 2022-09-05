@@ -20,6 +20,8 @@ public class ImageFile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(nullable = false, length = 1000)
+    private String url;
     @Column(nullable = false)
     private String path;
     @Column(nullable = false)

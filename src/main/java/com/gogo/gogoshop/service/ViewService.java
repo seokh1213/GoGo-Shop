@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.gogo.gogoshop.dto.ViewDTO.builder;
 
 @Service
 @RequiredArgsConstructor
@@ -22,7 +21,7 @@ public class ViewService {
     private final ProductRepository productRepository;
 
     public ViewDTO getBannerByViewType(ViewType viewType) {
-        View view = viewRepository.findByViewTypeAndHidden(ViewType.MAIN, false);
+        View view = viewRepository.findByViewTypeAndHidden(viewType, false);
 
         List<BannerDTO> bannerList = view.getBannerList().stream()
                 .map(banner -> BannerDTO.builder()
@@ -42,14 +41,14 @@ public class ViewService {
                                         .price(product.getPrice())
                                         .discountPrice((long) (product.getPrice() * (1 - product.getDiscountRate() / 10000f)))
                                         .discountRate(product.getDiscountRate())
-                                        .imageUrl(product.getThumbnailUrl())
+                                        .imageUrl(product.getImageUrlList().get(0).getUrl())
                                         .seller(product.getSeller().getNickname())
                                         .build())
                                 .collect(Collectors.toList()))
                         .build())
                 .collect(Collectors.toList());
 
-        return builder()
+        return ViewDTO.builder()
                 .bannerList(bannerList)
                 .layoutList(layoutList)
                 .build();
