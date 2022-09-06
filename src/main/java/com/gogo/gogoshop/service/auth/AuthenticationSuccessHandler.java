@@ -30,10 +30,8 @@ public class AuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccess
 
         String targetUrl;
         if (!user.isBlock()) {
-            manageAuthService.setAuth(response, authDTO);
-            targetUrl = frontEndUrl + "/callback";
+            targetUrl = manageAuthService.getAuthUrl(authDTO, frontEndUrl + "/callback");
         } else {
-            manageAuthService.clearAuth(response);
             targetUrl = frontEndUrl + "/callback/failure";
         }
 

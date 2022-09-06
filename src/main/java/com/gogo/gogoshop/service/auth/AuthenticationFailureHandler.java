@@ -21,7 +21,6 @@ public class AuthenticationFailureHandler extends SimpleUrlAuthenticationFailure
 
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException {
-        manageAuthService.clearAuth(response);
         getRedirectStrategy().sendRedirect(request, response, frontEndUrl + "/callback/failure");
     }
 }

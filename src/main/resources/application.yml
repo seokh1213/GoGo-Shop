@@ -42,4 +42,3 @@ front-end-url: ${FRONTEND_URL:http://127.0.0.1:3000}
 cors-allowed-origins: http://localhost:3000,http://127.0.0.1:3000,${front-end-url}
 token-expire-seconds: 3_600
 token-key: ${TOKEN_KEY:7B9476CED2F62DBC3A323A4B7E8B312C}
-token-cookie-name: ${TOKEN_KEY:token}
