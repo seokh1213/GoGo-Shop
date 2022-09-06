@@ -109,18 +109,15 @@
        "option_list": [
          {
            "order": 1,
-           "default_title": "[컬러]를 선택하세요.",
+           "option_title": "[컬러]를 선택하세요.",
            "detail_option_list": ["Black", "White"]
          },
          {
            "order": 2,
-           "default_title": "[사이즈]를 선택하세요",
+           "option_title": "[사이즈]를 선택하세요",
            "detail_option_list": ["Free"]
          }
-       ],
-       "details": {
-          "detail_image_url": "image_url" 
-        }
+       ]
      }
    }
    ```

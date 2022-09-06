@@ -15,6 +15,7 @@ public class CommonException extends BaseException {
     public static CommonException TOKEN_EXPIRED = new CommonException(403, "TOKEN_EXPIRED");
     public static CommonException FORBIDDEN = new CommonException(403, "FORBIDDEN");
     public static CommonException PAGE_NOT_FOUND = new CommonException(404, "PAGE_NOT_FOUND");
+    public static CommonException ITEM_NOT_FOUND = new CommonException(404, "ITEM_NOT_FOUND");
     public static CommonException SERVER_ERROR = new CommonException(500, "SERVER_ERROR");
 
     private final int status;

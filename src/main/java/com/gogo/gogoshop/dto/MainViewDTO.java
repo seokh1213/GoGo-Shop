@@ -8,7 +8,7 @@ import java.util.List;
 
 @Getter
 @Builder
-public class ViewDTO {
+public class MainViewDTO {
     private final List<BannerDTO> bannerList;
     private final List<LayoutDTO> layoutList;
 
@@ -33,7 +33,7 @@ public class ViewDTO {
             private final String name;
             private final long price;
             private final long discountPrice;
-            private final short discountRate;
+            private final double discountRate;
             private final String imageUrl;
             private final String seller;
         }
