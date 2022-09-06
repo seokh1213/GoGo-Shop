@@ -36,7 +36,6 @@ public class ManageAuthService {
 
     private void setAuthCookie(HttpServletResponse response, String value, int maxAge) {
         Cookie cookie = new Cookie(tokenCookieName, value);
-        cookie.setSecure(true);
         cookie.setHttpOnly(true);
         cookie.setPath("/");
         cookie.setMaxAge(maxAge);
