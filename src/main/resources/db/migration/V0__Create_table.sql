@@ -19,12 +19,14 @@ create table user
         primary key,
     create_dt datetime(6)  not null,
     email     varchar(255) not null,
-    nickname  varchar(255) null,
+    nickname  varchar(255) not null,
     type      varchar(255) not null,
     uid       varchar(255) not null,
     update_dt datetime(6)  not null,
     constraint UK_a7hlm8sj8kmijx6ucp7wfyt31
         unique (uid),
+    constraint UK_nicknameUnique19djck90011
+        unique (nickname),
     constraint UK_ob8kqyqqgmefl0aco34akdtpe
         unique (email)
 );

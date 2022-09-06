@@ -30,6 +30,7 @@ public class User {
     private String uid;
     @Column(unique = true, nullable = false)
     private String email;
+    @Column(unique = true, nullable = false)
     private String nickname;
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)

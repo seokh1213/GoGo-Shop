@@ -1,5 +1,6 @@
 package com.gogo.gogoshop.service.auth;
 
+import com.gogo.gogoshop.dto.AuthDTO;
 import com.gogo.gogoshop.entity.Auth;
 import com.gogo.gogoshop.exception.CommonException;
 import com.gogo.gogoshop.repository.AuthRepository;
@@ -25,7 +26,7 @@ public class AuthService {
         return authRepository.findByUid(uid);
     }
 
-    public Auth saveAuth(Authentication authentication) {
+    public AuthDTO saveAuth(Authentication authentication) {
         OAuth2AuthenticationToken authToken = (OAuth2AuthenticationToken) authentication;
 
         AuthPrincipal authPrincipal = parseAuthResult(authToken.getPrincipal());
@@ -36,14 +37,20 @@ public class AuthService {
                     return new Auth(authPrincipal.getUid(), authPrincipal.getEmail(), provider);
                 });
 
-        return authRepository.save(auth);
+        authRepository.save(auth);
+
+        return AuthDTO.builder()
+                .uid(auth.getUid())
+                .email(auth.getEmail())
+                .nickname(authPrincipal.getNickname())
+                .build();
     }
 
     @SuppressWarnings("unchecked")
     private AuthPrincipal parseAuthResult(OAuth2User oAuth2User) {
         try {
             Map<String, Object> responseMap = (Map<String, Object>) oAuth2User.getAttributes().get("response");
-            return new AuthPrincipal(HashUtil.sha256(responseMap.get("id").toString()), responseMap.get("email").toString());
+            return new AuthPrincipal(HashUtil.sha256(responseMap.get("id").toString()), responseMap.get("email").toString(), responseMap.get("nickname").toString());
         } catch (Exception e) {
             log.warn("[AuthService] Fail to login.", e);
             throw CommonException.UNAUTHORIZED;
@@ -55,5 +62,6 @@ public class AuthService {
     public static class AuthPrincipal {
         private final String uid;
         private final String email;
+        private final String nickname;
     }
 }

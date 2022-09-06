@@ -1,6 +1,6 @@
 package com.gogo.gogoshop.service.auth;
 
-import com.gogo.gogoshop.entity.Auth;
+import com.gogo.gogoshop.dto.AuthDTO;
 import com.gogo.gogoshop.entity.User;
 import com.gogo.gogoshop.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -25,12 +25,12 @@ public class AuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccess
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
-        Auth auth = authService.saveAuth(authentication);
-        User user = userService.syncUser(auth.getUid(), auth.getEmail());
+        AuthDTO authDTO = authService.saveAuth(authentication);
+        User user = userService.syncUser(authDTO.getUid(), authDTO.getEmail(), authDTO.getNickname());
 
         String targetUrl;
         if (!user.isBlock()) {
-            manageAuthService.setAuth(response, auth);
+            manageAuthService.setAuth(response, authDTO);
             targetUrl = frontEndUrl + "/callback";
         } else {
             manageAuthService.clearAuth(response);

@@ -1,5 +1,6 @@
 package com.gogo.gogoshop.service;
 
+import com.gogo.gogoshop.dto.UserDTO;
 import com.gogo.gogoshop.entity.User;
 import com.gogo.gogoshop.enums.UserType;
 import com.gogo.gogoshop.repository.UserRepository;
@@ -17,12 +18,20 @@ public class UserService {
         return userRepository.findByUid(uid);
     }
 
-    public User syncUser(String uid, String email) {
+    public User syncUser(String uid, String email, String nickname) {
         User user = userRepository.findByUid(uid)
-                .orElseGet(() -> new User(uid, email, null, UserType.USER));
+                .orElseGet(() -> new User(uid, email, nickname, UserType.USER));
 
         userRepository.save(user);
 
         return user;
+    }
+
+    public UserDTO convertUser(User user) {
+        return UserDTO.builder()
+                .id(user.getId())
+                .email(user.getEmail())
+                .nickname(user.getNickname())
+                .build();
     }
 }

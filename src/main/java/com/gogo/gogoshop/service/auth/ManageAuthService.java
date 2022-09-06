@@ -1,6 +1,6 @@
 package com.gogo.gogoshop.service.auth;
 
-import com.gogo.gogoshop.entity.Auth;
+import com.gogo.gogoshop.dto.AuthDTO;
 import com.gogo.gogoshop.exception.CommonException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,8 +25,8 @@ public class ManageAuthService {
     private int tokenExpireSeconds;
 
 
-    public void setAuth(HttpServletResponse response, Auth auth) {
-        String token = tokenService.issueToken(auth.getUid());
+    public void setAuth(HttpServletResponse response, AuthDTO authDTO) {
+        String token = tokenService.issueToken(authDTO.getUid());
         setAuthCookie(response, token, tokenExpireSeconds);
     }
 
