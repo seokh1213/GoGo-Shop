@@ -52,6 +52,14 @@ VALUES ('면100% 감귤 곰돌이 레이스 프릴 스퀘어넥 러블리 루즈
 투피스',
         1, 30100, 500, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', '원피스,투피스', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (1, 1),
+       (1, 2);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/09/04/SB000000000071401833_1662270671_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -127,6 +135,16 @@ MODEL SIZE
 키 166cm / 상의44(S) / 하의 26(S) / 발사이즈 235
 ',
         7, 31600, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', '블랙,진청,중청,연청', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[기장]를 선택하세요.', '롱,기본,숏', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (3, '[사이즈]를 선택하세요.', 'S,M,L,XL,XXL', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (2, 3),
+       (2, 4),
+       (2, 5);
 
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/08/23/SB000000000070117579_1661239432_image1_M.jpeg', CURRENT_TIMESTAMP,
@@ -210,6 +228,16 @@ S , M , L , XL , 2XL
 MODEL SIZE
 키 166cm / 상의44(S) / 하의 26(S) / 발사이즈 235',
         13, 31600, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', '블랙,화이트', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[기장]를 선택하세요.', '롱,숏,기본', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (3, '[사이즈]를 선택하세요.', 'S,M,L,XL,XXL', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (3, 6),
+       (3, 7),
+       (3, 8);
 
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/08/04/SB000000000069046795_1659627497_image1_M.jpeg', CURRENT_TIMESTAMP,
@@ -305,6 +333,14 @@ COMMENT
 
 어색함이 안 느껴지실꺼에요',
         19, 31600, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[컬러]를 선택하세요.', '블랙,오트밀,그레이,그린,소라', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'Free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (4, 9),
+       (4, 10);
 
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/08/07/SB000000000069199818_1659893357_image1_M.jpeg', CURRENT_TIMESTAMP,
@@ -472,6 +508,16 @@ notice
 제품 색상은 모니터 해상도에 따라 차이가 있을 수 있습니다.',
         23, 30600, 900, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[컬러]를 선택하세요.', '블랙,베이지,다크그레이,브라운', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[기장선택]를 선택하세요.', '숏,기본,롱', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (3, '[사이즈]를 선택하세요.', 'S,M,L,XL,2XL', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (5, 11),
+       (5, 12),
+       (5, 13);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/08/23/SB000000000070152686_1661270162_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -563,6 +609,15 @@ VALUES ('[가을ver./셔츠맛집] 인생 잘록핏! 뒷밴딩 크롭 셔츠/남
 
 (소라)',
         26, 23700, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[컬러]를 선택하세요.', '소라,아이보리,블랙', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'Free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (6, 14),
+       (6, 15);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/08/05/SB000000000069166716_1659719153_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -617,6 +672,14 @@ VALUES ('[퀄리티보장] 슬림핏, 투웨이 골지카라 긴팔니트 집업
 
 ',
         28, 21700, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[컬러]를 선택하세요.', '소라,그레이,블랙,크림', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'Free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (7, 16),
+       (7, 17);
 
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/08/18/SB000000000069812613_1660838356_image1_M.jpeg', CURRENT_TIMESTAMP,
@@ -692,6 +755,14 @@ VALUES ('[오버핏] 남친 옷 뺏어입은 듯한, 왕박시 니트 가디건_
 부드러운 소재감으로 편한 착용감을 느끼실 수 있어요',
         33, 37400, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[컬러]를 선택하세요.', '블랙,아이보리,핑크,브라운,소라', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'Free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (8, 18),
+       (8, 19);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/08/15/SB000000000069569208_1660574424_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -759,6 +830,14 @@ VALUES ('(6color)쥬디 가을 크롭 루즈핏 브이넥 니트 가디건_프�
 ',
         39, 25700, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[컬러]를 선택하세요.', 'Black,Cream,Blue,Pink,Yellow,Purple', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'Free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (9, 20),
+       (9, 21);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/08/18/SB000000000069775798_1660809830_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -810,6 +889,14 @@ model
 162cm / 46kg / 상의55 / 하의 26(S) / 230mm',
         43, 19900, 0, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', '그레이,네이비,베이지,챠콜,카키', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (10, 22),
+       (10, 23);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/09/05/SB000000000071453436_1662359889_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -849,6 +936,12 @@ INSERT INTO product(name, description, detail_image_url_id,
                     create_dt, update_dt)
 VALUES ('벌룬 레더 오버핏 점퍼 (2 color)_행자씨_2', null,
         48, 57200, 10000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[컬러]를 선택하세요.', '아이보리,블랙', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (11, 24);
 
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/09/05/SB000000000071453430_1662359880_image1_M.jpeg', CURRENT_TIMESTAMP,
@@ -927,6 +1020,14 @@ SIZE
 하의 - FREE / 총장 40 허리 27 힙단면 54 밑위길이 29 허벅지단면 31 밑단단면 34',
         54, 47300, 900, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[컬러]를 선택하세요.', '베이지,블랙', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'Free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (12, 25),
+       (12, 26);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/09/05/SB000000000071453423_1662359873_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -992,6 +1093,14 @@ size : 어깨79   가슴70   소매56   암홀30   총기장71   밑단55   (fre
 -빛의 각도에 따라 색깔이 달라 보일 수 있습니다. 화면의 해상도에 따라 색깔이 달라보일 수 있습니다. - '
        , 59, 33600, 900, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[칼라]를 선택하세요.', '백멜란지,주황,카키,블랙', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'Free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (13, 27),
+       (13, 28);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/09/05/SB000000000071453406_1662359824_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -1037,6 +1146,12 @@ INSERT INTO product(name, description, detail_image_url_id,
                     create_dt, update_dt)
 VALUES ('[아방함/벌룬핏] 스트릿 빈티지 프린팅 다운타운 빌리지 특양면 오버핏 맨투맨 3color]빌리맨투맨_세컨에이니', null,
         65, 31600, 900, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', '오트밀,메란지회,차콜', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (14, 29);
 
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/09/05/SB000000000071453401_1662359810_image1_M.jpeg', CURRENT_TIMESTAMP,
@@ -1089,6 +1204,14 @@ model size
 첫 세탁 시, 드라이클리닝을 권장합니다.빛의 각도 및 화면 해상도에 따라 색상이 달라 보일 수 있습니다.',
         69, 47300, 900, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', '검정,브라운,진회색,소라,아이보리', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (15, 30),
+       (15, 31);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/09/05/SB000000000071453397_1662359800_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -1114,6 +1237,14 @@ INSERT INTO product(name, description, detail_image_url_id,
 VALUES ('데님 바트 카고팬츠', null,
         72, 35500, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[컬러]를 선택하세요.', '청', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'M,L', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (16, 32),
+       (16, 33);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/09/05/SB000000000071453235_1662359769_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -1131,6 +1262,14 @@ INSERT INTO product(name, description, detail_image_url_id,
                     create_dt, update_dt)
 VALUES ('브이넥 얇은 니트 가디건', null,
         74, 18900, 0, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[컬러]를 선택하세요.', 'White,Gray,Black,Yellow,Blue', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'Free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (17, 34),
+       (17, 35);
 
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/09/05/SB000000000071453232_1662359766_image1_M.jpeg', CURRENT_TIMESTAMP,
@@ -1217,6 +1356,12 @@ fabric
 ---------',
         76, 21700, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', '블랙,네이비,그린,핑크,보라,블루', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (18, 36);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/08/11/SB000000000069449655_1660217703_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -1262,6 +1407,12 @@ INSERT INTO product(name, description, detail_image_url_id,
                     create_dt, update_dt)
 VALUES ('[4color/기본템!] 쫀득 스퀘어넥 스판 크롭 긴팔 티셔츠_모어샤인_2', null, 82,
         21700, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', '화이트,스카이,그레이,블랙', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (19, 37);
 
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/08/25/SB000000000070287760_1661403324_image1_M.jpeg', CURRENT_TIMESTAMP,
@@ -1309,6 +1460,16 @@ MODEL SIZE
 키 166cm / 상의44(S) / 하의 26(S) / 발사이즈 235', 85,
         30600, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', '중청', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[기장]를 선택하세요.', '롱,기본,숏', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (3, '[사이즈]를 선택하세요.', 'S,M,L,XL,XXL', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (20, 38),
+       (20, 39),
+       (20, 40);
+
 INSERT INTO image_url(url, create_dt, update_dt)
 VALUES ('https://image.brandi.me/cproduct/2022/08/16/SB000000000069627060_1660639941_image1_M.jpeg', CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
@@ -1343,6 +1504,370 @@ VALUES (20, 89);
 
 INSERT INTO product_image_url_list(product_id, image_url_list_id)
 VALUES (20, 90);
+
+-- product 21
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproductdetail/2022/09/06/0d2dbda9dc47af84b1dd84a3477f8f6e.JPG',
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO product(name, description, detail_image_url_id,
+                    price, discount_rate, seller_id,
+                    create_dt, update_dt)
+VALUES ('749 캣팅 부츠컷 OOT', '749 캣팅 부츠컷  OOT
+
+사이즈 (단면 cm)
+
+S 허리 28  힙 40  허벅지 23 밑단 26  밑위 27   기장 106
+M 허리 30  힙 42  허벅지 24 밑단 27  밑위 28   기장 107
+L 허리 32  힙 44  허벅지 25 밑단 28  밑위 29   기장 108
+
+※ 단위는 cm 단면 기준으로 측정
+※사이즈 측정인 방번에 따라,1~3cm 오차가 발생할 수 있습니다
+
+
+모델
+
+키 164cm   몸무게44kg  허리 25~26인치
+
+
+Fabric
+
+신축성:없음 / 비침:없음 / 안감:없음/ 두께감:보통
+
+
+혼용률: 면 97 스판 3 ', 91,
+        54000, 0, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', '청', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'S,M,L', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (21, 41),
+       (21, 42);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513450_1662430932_image1_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513450_1662430932_image2_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513450_1662430932_image3_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (21, 92);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (21, 93);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (21, 94);
+
+-- product 22
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://leehit.com/web/clothes/bottom/WCH280401/sum600_.gif',
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO product(name, description, detail_image_url_id,
+                    price, discount_rate, seller_id,
+                    create_dt, update_dt)
+VALUES ('세상예쁜부츠컷슬랙스(2XL~4XL)', 'MD COMMENT
+
+
+세상~세상~ 핏예쁜부츠컷슬랙스 소개해드려요
+툭 걸쳐주기만 하면 멋스럽게 살아나는 핏감~
+어디든 잘 어울리는 팬츠 세상예쁜부츠컷!
+
+리힛 시그니처인 세상편한데님과 함께
+핏하면 요 아이죠! 정말 최고랍니다!
+
+
+컬러도 7컬러에 사이즈는 또 4XL까지~!
+거기에 숏버전 롱버전(숏+6CM)으로 두가지 기장감까지
+믿겨지지 않는 컬러감과 폭넓은 사이즈 스펙으로
+내 몸에 꼭맞게 입어주시기만 하면 데일리 코디 완성!
+
+사이즈는 정사이즈로 나왔는데 허리 밴딩 제품은 아니라
+한 사이즈 UP해서 입는것도 추천드려요 :)
+
+신축성은 스판이 함유되어 적당한 신축성을 느끼실 수 있어
+불편함없이 예쁘게 착용되실거에요
+
+허벅지부터 부담스럽지 않게 떨어지는 부츠컷 핏감으로
+오피스룩으로도 좋고 데일리로도 활용도 높은 슬랙스랍니다
+유니폼으로도 많이 애용해주시고 계셔서 추천드려요
+
+원단 두께감은 한겨울을 빼고 3계절 입을 수 있는
+적당한 두께감으로 한번 소장하시면 주구장창!! 입기 좋은 슬랙스에요 :)
+
+모델핏은 44~마름55사이즈라 약간은 여유있는 느낌이라서
+주문 전 참고해주시면 좋을 것 같아요!
+여유있는 느낌도 핏이 워낙예뻐서 여유감이 있이 입으셔도 예쁘실거에요!
+
+핏이 낄까 걱정되시면 한사이즈 업해서 주문하시는걸 권해드려요~
+
+
+
+절대 실패없는 바지!
+나만의 또 하나의 리힛 인생바지
+
+지금 바로 리힛에서 만나보세요 :)
+
+
+
+
+
+
+
+
+
+
+
+
+
+SIZE TIP
+
+사이즈는 S~4XL까지 7단으로 출시
+
+자세한 사이즈는 아래 사이즈표를 참고부탁드려요
+
+
+
+
+
+
+
+
+COLOR
+
+그레이, 네이비, 딥핑크, 브라운, 블랙, 샌드,크림
+
+
+
+
+
+
+
+
+
+
+SIZE(단면기준)
+
+S 허리 : 33/ 밑위 : 30/ 엉덩이 : 43/ 허벅지 : 26/ 밑단 : 23/ 총장(숏/롱) : 96/102
+
+M 허리 : 35.5/ 밑위 : 31/ 엉덩이 : 45/ 허벅지 : 27/ 밑단 : 24.5/ 총장(숏/롱) : 97/103
+
+L 허리 : 38/ 밑위 : 32/ 엉덩이 : 47/ 허벅지 : 28/ 밑단 : 25.5/ 총장(숏/롱) : 98/104
+
+XL 허리 : 40/ 밑위 : 33/엉덩이 : 48/ 허벅지 : 29/ 밑단 : 26.5/ 총장(숏/롱) : 99/105
+
+2XL 허리 : 43/ 밑위 : 34/ 엉덩이 : 50/ 허벅지 : 30/ 밑단 : 28/ 총장(숏/롱) : 100/107
+
+3XL 허리 : 45.5/ 밑위 : 35/ 엉덩이 : 52/ 허벅지 : 31/ 밑단 : 29.5/ 총장(숏/롱) : 101/108
+4XL 허리 : 48/ 밑위 : 36/ 엉덩이 : 54/ 허벅지 : 32/ 밑단 : 30.5/ 총장(숏/롱) : 102/109
+
+
+* 사이즈는 실측자에 따라 1~3CM정도 오차가 있을 수 있습니다
+
+
+
+
+FABRIC
+
+폴리에스터 98%, 폴리우레탄 2%
+
+
+
+
+
+
+세탁방법
+
+드라이크리닝/단독세탁/건조기금지
+
+
+
+
+
+
+
+
+MODEL SIZE
+
+키 : 167cm 몸무게 : 51kg
+
+상의 : 55사이즈 / S
+
+하의 : 26인치 / 55사이즈
+
+신발 : 245mm
+
+(팔다리가 가늘고 길어 여성스러운 라인이 잘 드러나는 체형입니다)
+
+
+
+
+
+
+
+
+C A U T I O N
+
+
+
+- 구매자 단순변심 사유 반품/교환 요청은 상품 수령일로부터 7일 이내 반품/교환 표시를 한 주문건에 대하여 가능합니다.
+
+- 사이즈 부분은 불량 및 파손 사유가 아니며 판매자 측 과실로 처리되지 않습니다
+
+- 자세한 사이즈는 꼭 상세 페이지 상단의 상세 치수를 확인 후 구매해주세요', 95,
+        28600, 800, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[컬러]를 선택하세요.',
+        '그레이(숏기장),그레이(롱기장),네이비(숏기장),네이비(롱기장),딥핑크(숏기장),딥핑크(롱기장),브라운(숏기장),브라운(롱기장),블랙(숏기장),블랙(롱기장),샌드(숏기장),샌드(롱기장),크림(숏기장),크림(롱기장)',
+        CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', '2XL,3XL,4XL', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (22, 43),
+       (22, 44);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513446_1662430926_image1_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513446_1662430926_image2_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513446_1662430926_image3_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513446_1662430926_image4_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513446_1662430926_image5_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (22, 96);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (22, 97);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (22, 98);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (22, 99);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (22, 100);
+
+-- product 23
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://gaenso.cdn.smart-img.com/image/GREYRAISE/CH-10202/two_w_01.jpg',
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO product(name, description, detail_image_url_id,
+                    price, discount_rate, seller_id,
+                    create_dt, update_dt)
+VALUES ('로맨틱핀턱셔링미니원피스', null, 101,
+        27900, 0, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', '크림베이지', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'FREE', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (23, 45),
+       (23, 46);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513403_1662430916_image1_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513403_1662430916_image2_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513403_1662430916_image3_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513403_1662430916_image4_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513403_1662430916_image5_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (23, 102);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (23, 103);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (23, 104);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (23, 105);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (23, 106);
+
+-- product 24
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://gi.esmplus.com/jkop1105/2022_f_Richard_man/2022_f_Richard_man_1.jpg',
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO product(name, description, detail_image_url_id,
+                    price, discount_rate, seller_id,
+                    create_dt, update_dt)
+VALUES ('리차드 프린팅 맨투맨 (3color)', null, 107,
+        36000, 0, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
+VALUES (1, '[색상]를 선택하세요.', 'Gray,Camel,Black', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+       (2, '[사이즈]를 선택하세요.', 'Free', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO product_product_option(product_id, product_option_id)
+VALUES (24, 47),
+       (24, 48);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513388_1662430898_image1_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513388_1662430898_image2_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO image_url(url, create_dt, update_dt)
+VALUES ('https://image.brandi.me/cproduct/2022/09/06/SB000000000071513388_1662430898_image3_M.jpeg', CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (24, 108);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (24, 109);
+
+INSERT INTO product_image_url_list(product_id, image_url_list_id)
+VALUES (24, 110);
 
 -- layout
 INSERT INTO layout(layout_type, title, description, create_dt, update_dt)
@@ -1415,6 +1940,18 @@ VALUES (3, 19);
 
 INSERT INTO layout_product_list(layout_id, product_list_id)
 VALUES (3, 20);
+
+INSERT INTO layout_product_list(layout_id, product_list_id)
+VALUES (3, 21);
+
+INSERT INTO layout_product_list(layout_id, product_list_id)
+VALUES (3, 22);
+
+INSERT INTO layout_product_list(layout_id, product_list_id)
+VALUES (3, 23);
+
+INSERT INTO layout_product_list(layout_id, product_list_id)
+VALUES (3, 24);
 
 -- banner
 INSERT INTO banner(banner_image_url, event_id, seller_id, activated, create_dt, update_dt)
