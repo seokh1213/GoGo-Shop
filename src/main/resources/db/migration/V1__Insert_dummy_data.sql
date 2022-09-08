@@ -935,7 +935,7 @@ INSERT INTO product(name, description, detail_image_url_id,
                     price, discount_rate, seller_id,
                     create_dt, update_dt)
 VALUES ('벌룬 레더 오버핏 점퍼 (2 color)_행자씨_2', null,
-        48, 57200, 10000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+        48, 57200, 1000, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO product_option(order_value, option_title, option_list, create_dt, update_dt)
 VALUES (1, '[컬러]를 선택하세요.', '아이보리,블랙', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
