@@ -1899,7 +1899,7 @@ VALUES (1, 8);
 
 -- layout 2
 INSERT INTO layout(layout_type, title, description, create_dt, update_dt)
-VALUES ('LIST', 'TODAY 카테고리 베스트?', null, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+VALUES ('LIST', 'TODAY 카테고리 베스트', null, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 INSERT INTO layout_product_list(layout_id, product_list_id)
 VALUES (2, 9);
