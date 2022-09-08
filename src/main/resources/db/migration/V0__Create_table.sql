@@ -2,11 +2,11 @@ create table auth
 (
     id        bigint auto_increment
         primary key,
-    create_dt datetime(6)  not null,
+    create_dt datetime(6) not null,
     email     varchar(255) not null,
     provider  varchar(255) not null,
     uid       varchar(255) not null,
-    update_dt datetime(6)  not null,
+    update_dt datetime(6) not null,
     constraint UK_cqw9pwi9ha15dml8t11va7x8q
         unique (uid),
     constraint UK_frir1w2v8n1df8jgri5mox179
@@ -17,12 +17,12 @@ create table user
 (
     id        bigint auto_increment
         primary key,
-    create_dt datetime(6)  not null,
+    create_dt datetime(6) not null,
     email     varchar(255) not null,
     nickname  varchar(255) not null,
     type      varchar(255) not null,
     uid       varchar(255) not null,
-    update_dt datetime(6)  not null,
+    update_dt datetime(6) not null,
     constraint UK_a7hlm8sj8kmijx6ucp7wfyt31
         unique (uid),
     constraint UK_nicknameUnique19djck90011
@@ -37,9 +37,9 @@ create table banner
         primary key,
     activated        bit          not null,
     banner_image_url varchar(255) not null,
-    create_dt        datetime(6)  not null,
+    create_dt        datetime(6) not null,
     event_id         varchar(255) not null,
-    update_dt        datetime(6)  not null,
+    update_dt        datetime(6) not null,
     seller_id        bigint       not null,
     constraint FKv3toloqygfhkv8xnqqtew5nk
         foreign key (seller_id) references user (id)
@@ -49,12 +49,12 @@ create table image_file
 (
     id            bigint auto_increment
         primary key,
-    create_dt     datetime(6)   not null,
+    create_dt     datetime(6) not null,
     extension     varchar(255)  not null,
     name          varchar(255)  not null,
     original_name varchar(255)  not null,
     path          varchar(255)  not null,
-    update_dt     datetime(6)   not null,
+    update_dt     datetime(6) not null,
     url           varchar(1000) not null
 );
 
@@ -62,34 +62,35 @@ create table image_url
 (
     id        bigint auto_increment
         primary key,
-    create_dt datetime(6)   not null,
-    update_dt datetime(6)   not null,
+    create_dt datetime(6) not null,
+    update_dt datetime(6) not null,
     url       varchar(1000) not null
 );
 
 create table layout
 (
-    id          bigint auto_increment
+    id                bigint auto_increment
         primary key,
-    create_dt   datetime(6)  not null,
-    description varchar(255) null,
-    layout_type varchar(255) not null,
-    title       varchar(255) not null,
-    update_dt   datetime(6)  not null
+    create_dt         datetime(6) not null,
+    description       varchar(255) null,
+    layout_type       varchar(255) not null,
+    is_ranking_layout bit          not null default 0,
+    title             varchar(255) not null,
+    update_dt         datetime(6) not null
 );
 
 create table product
 (
     id                  bigint auto_increment
         primary key,
-    create_dt           datetime(6)   not null,
+    create_dt           datetime(6) not null,
     description         varchar(2000) null,
-    discount_rate       smallint      not null,
-    name                varchar(255)  not null,
-    price               bigint        not null,
-    update_dt           datetime(6)   not null,
-    detail_image_url_id bigint        not null,
-    seller_id           bigint        not null,
+    discount_rate       smallint     not null,
+    name                varchar(255) not null,
+    price               bigint       not null,
+    update_dt           datetime(6) not null,
+    detail_image_url_id bigint       not null,
+    seller_id           bigint       not null,
     constraint UK_bvtji5ef9lnvrjm83mmdimxyp
         unique (detail_image_url_id),
     constraint FKmsvavr0t3lra70gf2ymxdi5te
@@ -117,7 +118,7 @@ create table order_history
         primary key,
     create_dt datetime(6) not null,
     update_dt datetime(6) not null,
-    user_id   bigint      not null,
+    user_id   bigint not null,
     constraint FKp03guo9hm9uf9k0n4a1sam969
         foreign key (user_id) references user (id)
 );
@@ -150,11 +151,11 @@ create table product_option
 (
     id           bigint auto_increment
         primary key,
-    create_dt    datetime(6)  not null,
+    create_dt    datetime(6) not null,
     option_list  varchar(255) not null comment ',로 나눠져 있는 option. ex: Black,White,Red',
     option_title varchar(255) not null,
     order_value  int          not null,
-    update_dt    datetime(6)  not null
+    update_dt    datetime(6) not null
 );
 
 create table product_product_option
@@ -173,9 +174,9 @@ create table view
 (
     id        bigint auto_increment
         primary key,
-    create_dt datetime(6)  not null,
+    create_dt datetime(6) not null,
     hidden    bit          not null,
-    update_dt datetime(6)  not null,
+    update_dt datetime(6) not null,
     view_type varchar(255) not null
 );
 

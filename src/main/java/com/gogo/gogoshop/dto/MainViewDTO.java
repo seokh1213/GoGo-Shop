@@ -24,6 +24,7 @@ public class MainViewDTO {
     public static class LayoutDTO {
         private final LayoutType type;
         private final String title;
+        private final boolean isRankingLayout;
         private final List<ProductDTO> productList;
 
         @Getter

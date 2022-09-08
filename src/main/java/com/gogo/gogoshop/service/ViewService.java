@@ -38,6 +38,7 @@ public class ViewService {
                 .map(layout -> LayoutDTO.builder()
                         .type(layout.getLayoutType())
                         .title(layout.getTitle())
+                        .isRankingLayout(layout.isRankingLayout())
                         .productList(layout.getProductList().stream()
                                 .map(product -> LayoutDTO.ProductDTO.builder()
                                         .productId(product.getId())

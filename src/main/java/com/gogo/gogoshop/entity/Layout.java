@@ -4,6 +4,7 @@ import com.gogo.gogoshop.enums.LayoutType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,6 +34,9 @@ public class Layout {
     @Column(nullable = false)
     private String title;
     private String description;
+    @Column(nullable = false)
+    @ColumnDefault(value = "false")
+    private boolean isRankingLayout;
     @OneToMany
     private List<Product> productList;
     @Column(nullable = false)
