@@ -8,6 +8,7 @@
    ```http request
    GET /view/main 
    ```
+   Response Body
    ```json lines
    {
        "result": {
@@ -272,7 +273,7 @@
    ```http request
    GET /view/products/{productId}
    ```
-
+   Response Body
    ```json lines
     {
         "result": {
@@ -350,8 +351,17 @@
         ]
     }
     ```
+   Response Body
+   ```json lines
+   {
+    "result": {
+        "order_id": 1
+    },
+    "status": 0
+   }
+   ```
 
-2. 주문내역
+3. 주문내역
     ```http request
     GET /orders
     ```
@@ -359,6 +369,7 @@
     ```http header
     token: LOGIN_TOKEN
     ```
+   Response Body
     ```json lines
     {
     "result": {
