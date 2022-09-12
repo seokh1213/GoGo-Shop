@@ -1,6 +1,8 @@
 package com.gogo.gogoshop.dto;
 
 import lombok.Getter;
+import lombok.Setter;
+import org.springframework.lang.Nullable;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
@@ -11,6 +13,7 @@ import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Getter
+@Setter
 public class PurchaseOrderDTO {
     @Valid
     @NotNull
@@ -23,6 +26,7 @@ public class PurchaseOrderDTO {
     private List<ProductDTO> productList;
 
     @Getter
+    @Setter
     public static class UserInfoDTO {
         @NotEmpty
         private String name;
@@ -35,6 +39,7 @@ public class PurchaseOrderDTO {
     }
 
     @Getter
+    @Setter
     public static class DestinationInfoDTO {
         @NotEmpty
         private String name;
@@ -47,10 +52,11 @@ public class PurchaseOrderDTO {
         private String destinationAddress;
         @NotEmpty
         private String destinationDetailAddress;
-        private String memo;
+        private @Nullable String memo;
     }
 
     @Getter
+    @Setter
     public static class ProductDTO {
         @Min(1)
         private long productId;

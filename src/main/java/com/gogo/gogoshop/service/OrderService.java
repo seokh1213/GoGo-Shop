@@ -1,9 +1,12 @@
 package com.gogo.gogoshop.service;
 
+import com.gogo.gogoshop.annotation.AuthResult;
+import com.gogo.gogoshop.dto.OrderHistoryDTO;
 import com.gogo.gogoshop.dto.PurchaseOrderDTO;
 import com.gogo.gogoshop.entity.OrderHistory;
 import com.gogo.gogoshop.entity.Product;
 import com.gogo.gogoshop.entity.User;
+import com.gogo.gogoshop.enums.OrderHistoryState;
 import com.gogo.gogoshop.exception.CommonException;
 import com.gogo.gogoshop.repository.OrderHistoryRepository;
 import com.gogo.gogoshop.repository.ProductRepository;
@@ -30,6 +33,7 @@ public class OrderService {
         }
 
         OrderHistory orderHistory = new OrderHistory();
+        orderHistory.setState(OrderHistoryState.PURCHASED);
         orderHistory.setUser(user);
         orderHistory.setProductList(productList);
 
@@ -50,5 +54,11 @@ public class OrderService {
         orderHistoryRepository.save(orderHistory);
 
         return orderHistory.getId();
+    }
+
+    public List<OrderHistoryDTO> getOrderHistory(@AuthResult User user) {
+        return orderHistoryRepository.findAllByUser(user).stream()
+                .map(OrderHistoryDTO::of)
+                .collect(Collectors.toList());
     }
 }

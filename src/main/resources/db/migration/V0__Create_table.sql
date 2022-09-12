@@ -114,7 +114,7 @@ create table layout_product_list
 
 create table order_history
 (
-    id        bigint auto_increment
+    id                         bigint auto_increment
         primary key,
     purchase_user_name         varchar(255) not null,
     purchase_user_phone_number varchar(255) not null,
@@ -125,9 +125,10 @@ create table order_history
     destination_address        varchar(255) not null,
     destination_detail_address varchar(255) not null,
     memo                       varchar(255) null,
-    create_dt datetime(6) not null,
-    update_dt datetime(6) not null,
-    user_id   bigint not null,
+    state                      varchar(255) not null,
+    create_dt                  datetime(6) not null,
+    update_dt                  datetime(6) not null,
+    user_id                    bigint       not null,
     constraint FKp03guo9hm9uf9k0n4a1sam969
         foreign key (user_id) references user (id)
 );

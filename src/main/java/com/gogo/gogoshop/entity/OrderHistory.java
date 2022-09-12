@@ -1,10 +1,15 @@
 package com.gogo.gogoshop.entity;
 
+import com.gogo.gogoshop.enums.OrderHistoryState;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -28,6 +33,10 @@ public class OrderHistory {
     @OneToMany
     private List<Product> productList;
 
+    @Enumerated(EnumType.STRING)
+    @ColumnDefault("PURCHASED")
+    private OrderHistoryState state;
+
     @Column(nullable = false)
     private String purchaseUserName;
     @Column(nullable = false)
@@ -46,7 +55,7 @@ public class OrderHistory {
     private String destinationAddress;
     @Column(nullable = false)
     private String destinationDetailAddress;
-    private String memo;
+    private @Nullable String memo;
 
     @Column(nullable = false)
     private Instant createDt;
