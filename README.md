@@ -322,6 +322,10 @@
     ```http request
     POST /orders
     ```
+   Header
+    ```http header
+    token: LOGIN_TOKEN
+    ```
    Request Body
     ```json lines
     {
@@ -350,6 +354,10 @@
 2. 주문내역
     ```http request
     GET /orders
+    ```
+   Header
+    ```http header
+    token: LOGIN_TOKEN
     ```
     ```json lines
     {
