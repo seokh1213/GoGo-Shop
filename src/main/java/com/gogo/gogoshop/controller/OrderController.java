@@ -16,7 +16,7 @@ import javax.validation.Valid;
 import java.util.Map;
 
 
-@RequestMapping("/order")
+@RequestMapping("/orders")
 @RestController
 @RequiredArgsConstructor
 public class OrderController {
