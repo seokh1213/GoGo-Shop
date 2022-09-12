@@ -116,6 +116,15 @@ create table order_history
 (
     id        bigint auto_increment
         primary key,
+    purchase_user_name         varchar(255) not null,
+    purchase_user_phone_number varchar(255) not null,
+    purchase_user_email        varchar(255) not null,
+    receiver_name              varchar(255) not null,
+    receiver_phone_number      varchar(255) not null,
+    postal_code                varchar(255) not null,
+    destination_address        varchar(255) not null,
+    destination_detail_address varchar(255) not null,
+    memo                       varchar(255) null,
     create_dt datetime(6) not null,
     update_dt datetime(6) not null,
     user_id   bigint not null,

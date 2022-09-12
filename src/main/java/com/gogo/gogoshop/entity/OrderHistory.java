@@ -27,6 +27,27 @@ public class OrderHistory {
     private User user;
     @OneToMany
     private List<Product> productList;
+
+    @Column(nullable = false)
+    private String purchaseUserName;
+    @Column(nullable = false)
+    private String purchaseUserPhoneNumber;
+    @Column(nullable = false)
+    private String purchaseUserEmail;
+
+    @Column(nullable = false)
+    private String receiverName;
+    @Column(nullable = false)
+    private String receiverPhoneNumber;
+
+    @Column(nullable = false)
+    private String postalCode;
+    @Column(nullable = false)
+    private String destinationAddress;
+    @Column(nullable = false)
+    private String destinationDetailAddress;
+    private String memo;
+
     @Column(nullable = false)
     private Instant createDt;
     @Column(nullable = false)
