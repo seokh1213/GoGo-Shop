@@ -20,7 +20,7 @@ public class AES256Util {
             cipher.init(Cipher.ENCRYPT_MODE, secretKey, new IvParameterSpec(ivData));
 
             byte[] encrypted = cipher.doFinal(data.getBytes(StandardCharsets.UTF_8));
-            return new String(Base64.getEncoder().encode(encrypted));
+            return new String(Base64.getEncoder().encode(encrypted)).replaceAll(" ", "+");
         } catch (Exception e) {
             log.error("[encrypt] fail to encrypt", e);
             return null;
@@ -35,7 +35,7 @@ public class AES256Util {
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
             cipher.init(Cipher.DECRYPT_MODE, secretKey, new IvParameterSpec(ivData));
 
-            byte[] decrypted = Base64.getDecoder().decode(encryptedData.getBytes(StandardCharsets.UTF_8));
+            byte[] decrypted = Base64.getDecoder().decode(encryptedData.replaceAll(" ", "+").getBytes(StandardCharsets.UTF_8));
             return new String(cipher.doFinal(decrypted), StandardCharsets.UTF_8);
         } catch (Exception e) {
             log.error("[decrypt] fail to decrypt", e);
