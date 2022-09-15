@@ -104,8 +104,6 @@ create table layout_product_list
 (
     layout_id       bigint not null,
     product_list_id bigint not null,
-    constraint UK_12l1biklmhj6y75gwfwowkdn8
-        unique (product_list_id),
     constraint FK12yqlnxbl5ri1cmepd2pqldnv
         foreign key (product_list_id) references product (id),
     constraint FKavet4s3rtonadg5mj189ier1k
@@ -137,8 +135,6 @@ create table order_history_product_list
 (
     order_history_id bigint not null,
     product_list_id  bigint not null,
-    constraint UK_s70e7raa6gxu0csdxg061pmw2
-        unique (product_list_id),
     constraint FK2qshrxxiwuuhbmsfhexcrwbkk
         foreign key (order_history_id) references order_history (id),
     constraint FKgsgveaskkleqdhphua1c4f4nv
@@ -194,8 +190,6 @@ create table view_banner_list
 (
     view_id        bigint not null,
     banner_list_id bigint not null,
-    constraint UK_r030r2xp7ngveqe2pqq090o9m
-        unique (banner_list_id),
     constraint FK97dnqfoik4sp5t3vkodikrnyd
         foreign key (banner_list_id) references banner (id),
     constraint FK9lkcwj2modqmgj0n0vniaymf1
@@ -206,8 +200,6 @@ create table view_layout_list
 (
     view_id        bigint not null,
     layout_list_id bigint not null,
-    constraint UK_1gxful1ac6r2qx0gkkn5552su
-        unique (layout_list_id),
     constraint FKb8dj1p9plforkpckl5w20ev5b
         foreign key (layout_list_id) references layout (id),
     constraint FKcllrsi38k4cwvqe62l1o148os

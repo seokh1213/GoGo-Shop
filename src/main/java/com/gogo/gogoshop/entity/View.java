@@ -12,7 +12,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import java.time.Instant;
@@ -32,9 +32,9 @@ public class View {
     private ViewType viewType;
     @Column(nullable = false)
     private boolean hidden;
-    @OneToMany
+    @ManyToMany
     private List<Layout> layoutList;
-    @OneToMany
+    @ManyToMany
     private List<Banner> bannerList;
 
     @Column(nullable = false)

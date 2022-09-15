@@ -13,7 +13,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import java.time.Instant;
@@ -37,7 +37,7 @@ public class Layout {
     @Column(nullable = false)
     @ColumnDefault(value = "false")
     private boolean isRankingLayout;
-    @OneToMany
+    @ManyToMany
     private List<Product> productList;
     @Column(nullable = false)
     private Instant createDt;
