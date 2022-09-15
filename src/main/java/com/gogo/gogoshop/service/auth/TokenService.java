@@ -23,6 +23,8 @@ public class TokenService {
         String rawToken = (System.currentTimeMillis() + tokenExpireSeconds * 1000L) + delimiter + uid;
         String encryptedToken = AES256Util.encrypt(tokenKey, rawToken);
 
+        log.info("issueToken: {}", encryptedToken);
+
         if (Objects.isNull(encryptedToken)) {
             log.warn("[issueToken] fail to encrypt to token {}", rawToken);
             throw CommonException.SERVER_ERROR;
@@ -32,6 +34,8 @@ public class TokenService {
     }
 
     public String parseToken(String encryptedToken) {
+        log.info("parseToken: {}", encryptedToken);
+
         String rawToken = AES256Util.decrypt(tokenKey, encryptedToken);
         if (Objects.isNull(rawToken)) {
             log.warn("[parseToken] fail to decrypt token {}", encryptedToken);
