@@ -35,7 +35,7 @@ public class TokenService {
         String rawToken = AES256Util.decrypt(tokenKey, encryptedToken);
         if (Objects.isNull(rawToken)) {
             log.warn("[parseToken] fail to decrypt token {}", encryptedToken);
-            throw CommonException.SERVER_ERROR;
+            throw CommonException.UNAUTHORIZED;
         }
 
         String[] data = rawToken.split(delimiter);
